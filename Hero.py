@@ -22,10 +22,11 @@ class SuperHero:
 
 
 class AirHero(SuperHero):
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly=False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
-        self.fly = False
+        self.fly = fly
+
 
     def double_health(self):
         self.health_points **= 2
@@ -36,10 +37,10 @@ class AirHero(SuperHero):
 
 
 class EarthHero(SuperHero):
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly=False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
-        self.fly = False
+        self.fly = fly
 
     def double_health(self):
         self.health_points **= 2
